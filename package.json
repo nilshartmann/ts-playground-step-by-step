@@ -1,0 +1,30 @@
+{
+  "name": "react-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "npm run setup",
+    "setup": "node setup.js"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.2",
+    "react-loader": "^2.0.0",
+    "redux-devtools": "^3.3.2",
+    "rimraf": "^2.5.2",
+    "source-map-loader": "^0.2.0",
+    "typescript": "^2.3",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "@types/react": "^15.0.18",
+    "@types/react-dom": "^0.14.23",
+    "react": "^15",
+    "react-dom": "^15",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.0",
+    "redux-thunk": "^2.2.0"
+  }
+}
