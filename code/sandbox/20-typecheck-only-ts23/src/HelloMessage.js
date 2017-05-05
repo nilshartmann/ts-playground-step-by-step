@@ -31,7 +31,7 @@ import { SyntheticEvent } from "react";
  * @type {{ new(props: HelloMessageProps): {
      props: Readonly<HelloMessageProps>,
      state: Readonly<HelloMessageState>,
-		 input: HTMLInputElement,
+		 input?: HTMLInputElement,
 		 render: () => JSX.Element,
 		 setState: any,
 		 forceUpdate: any,
@@ -92,7 +92,7 @@ const HelloMessage = class HelloMessage extends React.Component {
 			// should raise an Error but does NOT:
 			// this.setState({someOtherGreeting: 'hihi'});
 
-			this.input.focus();
+			this.input && this.input.focus();
 
 			// raises error (CORRECT), as doNotFocus does not exisits on HTMLInputElement:
 			//  this.input.doNotFocus();
