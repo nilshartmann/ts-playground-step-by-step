@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": true,
+    "removeComments": false,
+    "experimentalDecorators": true,
+    "allowJs": true,
+		"checkJs": true,
+    "noLib": false,
+    "jsx": "react"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
