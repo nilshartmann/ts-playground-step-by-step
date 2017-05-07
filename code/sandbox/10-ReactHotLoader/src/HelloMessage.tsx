@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {SyntheticEvent} from "react";
 
+import Title from "./Title";
+
 type Props = {
     greeting: string;
     // greeting: boolean; // Outsch
@@ -18,8 +20,17 @@ export default class HelloMessage extends React.Component<Props, State> {
     render() {
         const output = <p>{this.state.greeting}, World</p>;
 
+		const title = <Title>React TypeScript Example</Title>;
+
+		// ouch: no React Element as Children allowed
+		// const title = <Title><h3>React TypeScript Example</h3></Title>;
+
+		// ouch: *must* specify a children
+		// const title = <Title></Title>;
+
         return (
             <div>
+				{title}
                 <input ref={input => this.input = input}
                        onChange={event => this.updateModel(event)}
                        value={this.state.greeting} />
