@@ -12,7 +12,6 @@
     "jsx": "react"
   },
   "include": [
-	"./declarations.d.ts",
     "./src/**/*"
   ]
 }

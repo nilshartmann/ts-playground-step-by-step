@@ -44,7 +44,7 @@ export default class HelloMessage extends React.Component<Props, State> {
                 </button>
             </div>);
     }
-    constructor(props) {
+    constructor(props: Props) {
         super(props);
         // ERROR: Object literal may only specify known properties, and 'aha' does not exist in type 'Readonly<State>'
         // this.state = {greeting: this.props.greeting, aha: 10};
