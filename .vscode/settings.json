@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite the default settings
+{
+	// Migrated from previous "File | Auto Save" setting:
+	"files.autoSave": "onFocusChange",
+	"editor.tabSize": 4,
+	"editor.detectIndentation": false,
+	"editor.formatOnType": false,
+}
