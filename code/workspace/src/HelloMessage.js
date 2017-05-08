@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-export default class HelloMessage extends React.Component<any, any> {
-    input: HTMLInputElement;
+export default class HelloMessage extends React.Component {
     render() {
         return (
             <div>
