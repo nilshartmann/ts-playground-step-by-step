@@ -2,7 +2,7 @@ import * as React from 'react';
 import {SyntheticEvent} from "react";
 import { connect } from 'react-redux';
 
-import * as actions from './actions';
+import {updateGreeting, resetGreeting} from './actions';
 
 type Props = {
     greeting: string;
@@ -42,5 +42,5 @@ class HelloMessage extends React.Component<Props, undefined> {
 
 export default connect(
     state => ({greeting: state.greeting}),
-    actions
+    {updateGreeting, resetGreeting}
 )(HelloMessage);
