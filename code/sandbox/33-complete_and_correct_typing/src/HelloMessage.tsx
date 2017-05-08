@@ -4,12 +4,21 @@ import { connect } from 'react-redux';
 
 import {updateGreeting, resetGreeting} from './actions';
 
-type Props = {
-    greeting: string;
+type OwnProps = {
     repeat?: boolean;
+};
+
+
+type StateProps = {
+    greeting: string;
+};
+
+type DispatchProps = {
     resetGreeting: () => void;
     updateGreeting: (string) => void;
 };
+
+type Props = OwnProps & StateProps & DispatchProps;
 
 class HelloMessage extends React.Component<Props, undefined> {
     input: HTMLInputElement;
@@ -40,7 +49,7 @@ class HelloMessage extends React.Component<Props, undefined> {
     }
 }
 
-export default connect(
+export default connect<StateProps, DispatchProps, OwnProps>(
     state => ({greeting: state.greeting}),
     {updateGreeting, resetGreeting}
 )(HelloMessage);

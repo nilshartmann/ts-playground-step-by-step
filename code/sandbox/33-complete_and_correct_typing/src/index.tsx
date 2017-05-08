@@ -10,6 +10,6 @@ import HelloMessage from './HelloMessage';
 const mountNode = document.getElementById('mount');
 ReactDOM.render(
     <Provider store={store}>
-        <HelloMessage/>
+        <HelloMessage repeat={true}/>
     </Provider>,
     mountNode);
