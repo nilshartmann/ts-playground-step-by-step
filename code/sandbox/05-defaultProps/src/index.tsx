@@ -10,4 +10,4 @@ const mountNode = document.getElementById('mount');
 // ReactDOM.render(<HelloMessage greeting={10}/>, mountNode);
 // also ouch
 // ReactDOM.render(<HelloMessage/>, mountNode);
-ReactDOM.render(<HelloMessage greeting="Huhu" repeat={true}/>, mountNode);
+ReactDOM.render(<HelloMessage greeting="Huhu" />, mountNode);

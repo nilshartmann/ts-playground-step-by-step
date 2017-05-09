@@ -11,7 +11,15 @@ type State = {
 }
 
 export default class HelloMessage extends React.Component<Props, State> {
+	// using a "Partial" type here make all props from Props
+	// optional so that we can specify only those properties
+	// we want to define default values for.
+	static defaultProps: Partial<Props> = {
+		repeat: true,
+	};
+
     input: HTMLInputElement;
+
     render() {
         const output = <p>{this.state.greeting}, World</p>;
 
