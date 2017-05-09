@@ -10,7 +10,7 @@ type State = {
 }
 
 export default class HelloMessage extends React.Component<Props, State> {
-    input: HTMLInputElement;
+    input?: HTMLInputElement;
     render() {
         return (
             <div>

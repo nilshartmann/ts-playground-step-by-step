@@ -17,7 +17,7 @@ export default class HelloMessage extends React.Component<Props, State> {
 		repeat: true,
 	};
 
-    input: HTMLInputElement;
+    input?: HTMLInputElement;
     render() {
         const output = <p>{this.state.greeting}, World</p>;
 
@@ -53,7 +53,7 @@ export default class HelloMessage extends React.Component<Props, State> {
     }
     reset() {
         this.setState({greeting: ""});
-        this.input.focus();
+        this.input && this.input.focus();
     }
     updateModel(event) {
         this.setState({greeting: event.target.value});
