@@ -14,8 +14,8 @@ type StateProps = {
 };
 
 type DispatchProps = {
-    resetGreeting: () => void;
-    updateGreeting: (string) => void;
+    resetGreeting: typeof resetGreeting;
+    updateGreeting: typeof updateGreeting;
 };
 
 type Props = OwnProps & StateProps & DispatchProps;
