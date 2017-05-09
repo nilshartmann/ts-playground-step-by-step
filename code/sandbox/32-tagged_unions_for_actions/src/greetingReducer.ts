@@ -1,5 +1,3 @@
-/* @flow */
-
 export default function greetingReducer(state = 'Hello', action) {
     switch (action.type) {
         case 'UPDATE_GREETING':
