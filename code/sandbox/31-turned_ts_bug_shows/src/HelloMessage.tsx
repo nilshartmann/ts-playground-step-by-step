@@ -8,7 +8,7 @@ type Props = {
     greeting: string;
     repeat?: boolean;
     resetGreeting: () => void;
-    updateGreeting: (string) => void;
+    updateGreeting: (greeting: string) => void;
 };
 
 class HelloMessage extends React.Component<Props, undefined> {
