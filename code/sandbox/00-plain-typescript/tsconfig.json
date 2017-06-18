@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": false,
+    "removeComments": false,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "noLib": false,
+	"strict": true,
+	"noImplicitAny": true
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
