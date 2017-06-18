@@ -10,7 +10,7 @@ function functiontypes() {
 	}
 
 	calculator(AddOperation, 2, 3); // 5
-	calculator(SqrtOperation, 3); // ERROR
+	// calculator(SqrtOperation, 3); // ERROR
 
 
 }

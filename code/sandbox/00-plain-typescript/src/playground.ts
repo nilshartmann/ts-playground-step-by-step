@@ -8,14 +8,13 @@ const susi: Person = {
 	livesIn: 'Hamburg'
 };
 
-const helmut:Person = {
+// const helmut:Person = { // ERROR
+// }
 
-}
-
-const lukas: Person = {
-	name: 'Lukas',
-	profession: 'Lokführer'
-}
+// const lukas: Person = { // ERROR: profession
+// 	name: 'Lukas',
+// 	profession: 'Lokführer'
+// }
 
 // STRUCTURAL TYPINGS
 type Book = {
@@ -38,7 +37,7 @@ function greet(name: string, greeting?: string) {
 greet('Klaus'); // Hello, Klaus
 greet('Susi', 'Moin')// Moin, Susi
 
-greet('Peter', null); // Argument of type 'null' is not assignable to parameter of type 'string | undefined'.
+// greet('Peter', null); // Argument of type 'null' is not assignable to parameter of type 'string | undefined'.
 
 // let city:string = null; // [ts] Type 'null' is not assignable to type 'string'.
 let city:string|null = null; // OK
@@ -49,7 +48,7 @@ let movies:Array<Movie> = [];
 
 persons.push({name: 'Klaus'});
 movies.push({title: 'Batman'});
-persons.push({title: 'Casablanca'}) // error
+// persons.push({title: 'Casablanca'}) // error
 
-persons = movies; // error
+// persons = movies; // error
 

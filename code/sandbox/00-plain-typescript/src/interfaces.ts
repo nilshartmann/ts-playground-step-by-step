@@ -1,5 +1,7 @@
 function interfaces() {
 
+	// Basic interface
+
 	interface Person {
 		name: string
 	}
@@ -10,17 +12,30 @@ function interfaces() {
 
 	const susi:Programmer = { name: 'Susi', language: 'TypeScript'};
 
+	// Interface vs Type
 	interface Auditable { audit: () => void }
 	type Loggable = { log: string };
 
-	interface X extends Auditable, Loggable {
+	interface IAuditableAndLoggable extends Auditable, Loggable {
 
 	}
+
+	interface ConfigurableLoggable extends Loggable {
+		level: string;
+	}
+
+	type TAuditableAndLoggable = Auditable & Loggable;
 
 
 	class Logger implements Loggable, Auditable {
 		log: string
 		audit() { }
+	}
+
+	class ExtendedLogger implements ConfigurableLoggable {
+		log: string;
+		level: string;
+		audit() {}
 	}
 
 }

@@ -5,6 +5,6 @@
   "scripts": {
     "start": "npm run clean && npm run tsc:watch",
     "clean": "../../../node_modules/.bin/rimraf -rf dist/",
-    "tsc:watch": "../../../node_modules/.bin/tsc --watch --outDir"
+    "tsc:watch": "../../../node_modules/.bin/tsc --watch --outDir dist/"
   }
 }

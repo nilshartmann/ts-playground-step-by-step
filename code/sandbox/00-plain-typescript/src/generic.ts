@@ -1,4 +1,4 @@
-function g() {
+function genericsExample() {
 
 interface Movie {
 	title: string
@@ -22,15 +22,15 @@ interface ShortMovie extends Movie {
 };
 
 const aMovie = { title: 'Batman' };
-const aMoviePlayer:MoviePlayer = new MoviePlayer(aMovie);
+// const aMoviePlayer:MoviePlayer = new MoviePlayer(aMovie);
 
 const myShortMovie:ShortMovie = { title: 'Short Movie', length: 12}
-let shortMoviePlayer:MoviePlayer = new MoviePlayer(myShortMovie);
+// let shortMoviePlayer:MoviePlayer = new MoviePlayer(myShortMovie);
 
 type Nullable<T> = T|null;
 
 const nullPerson:Nullable<Person> = null;
 const peter:Nullable<Person> = {name: 'Peter'};
-const invalid:Person = null;
+// const invalid:Person = null;
 
 }

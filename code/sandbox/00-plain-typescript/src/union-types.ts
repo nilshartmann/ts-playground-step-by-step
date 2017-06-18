@@ -5,14 +5,14 @@ function uniontypes() {
 
 	function sayHello(who: Musician|Programmer): void {
 		console.log(`Hello, ${who.name}`); // OK
-		console.log(`You play ${who.instrument}`);
+		// console.log(`You play ${who.instrument}`);
 			// ERR: Property 'instrument' does not exist on type 'Musician | Programmer'.
 			// ERR: Property 'instrument' does not exist on type 'Programmer'.
 	}
 
 	sayHello({name: 'Jimmi', instrument: 'Guitar'});
 	sayHello({name: 'Susi', language: 'TypeScript'});
-	sayHello({name: 'Dieter', city: 'Hamburg'}); // ERROR
+	// sayHello({name: 'Dieter', city: 'Hamburg'}); // ERROR
 
 	// Typsichere Unterscheidungen
 
@@ -22,18 +22,19 @@ function uniontypes() {
 	function runAction(action: SPEAK_ACTION | SING_ACTION): void {
 		if (action.type === 'SPEAK') {
 			console.log(action.sentence); // OK
-			console.log(action.song); // ERROR: Property 'song' does not exist on type 'SPEAK_ACTION'.
+			// console.log(action.song); // ERROR: Property 'song' does not exist on type 'SPEAK_ACTION'.
 		} else if (action.type === 'SING') {
 			console.log(action.song); // OK;
-		} else if (action.type === 'DANCE') { // ERROR: Property 'type' does not exist on type 'never'
-			// ...
 		}
+		// else if (action.type === 'DANCE') { // ERROR: Property 'type' does not exist on type 'never'
+		// 	// ...
+		// }
 
-		if (action.type === 'DANCE') { // ERROR: Operator '===' cannot be applied to types '"SING"' and '"DANCE"'.
-			// ...
-		}
+		// if (action.type === 'DANCE') { // ERROR: Operator '===' cannot be applied to types '"SING"' and '"DANCE"'.
+		// 	// ...
+		// }
 	}
 
 	runAction({type: 'SPEAK', sentence: 'Hello World'}); // OK
-	runAction({type: 'SPEAK', song: 'Final countdown'}) // ERROR
+	// runAction({type: 'SPEAK', song: 'Final countdown'}) // ERROR
 }
