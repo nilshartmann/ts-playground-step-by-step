@@ -40,15 +40,16 @@ function dumpPerson(person) {
  * @return {string} the hobby
  */
 function getHobby(person) {
-	// why is this not an error?
-	return 33;
+	// this would be an error
+    // return 33;
+    return 'basteln';
 }
 
 const theHobby = getHobby(p);
 
 /**
  *@param {Person?} person - an optional person
- *@return {string}
+ *@return {string?}
  */
 function getTheName(person) {
 	// error: person might be null
