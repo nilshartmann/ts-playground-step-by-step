@@ -40,7 +40,7 @@ import { SyntheticEvent } from "react";
 
    } }}
  */
-const HelloMessage = class HelloMessage extends React.Component {
+class HelloMessage extends React.Component {
 	// raises an error (CORRECT): wrong return type for render
 	// render() {
 	// 	return {
